@@ -1,120 +1,165 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UGC Portfolio</title>
+    <title>DOZA | UGC Portfolio</title>
     <style>
-        /* التصميم */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
             font-family: 'Arial', sans-serif;
             background-color: #0f0f0f;
             color: #ffffff;
-            margin: 0;
-            padding: 0;
             text-align: center;
+            line-height: 1.6;
         }
         .hero {
-            padding: 50px 20px;
+            padding: 60px 20px;
             background: linear-gradient(135deg, #1f1f1f, #0f0f0f);
         }
         .hero img {
-            width: 120px;
-            height: 120px;
+            width: 130px;
+            height: 130px;
             border-radius: 50%;
             object-fit: cover;
             border: 3px solid #ff3366;
         }
-        .hero h1 { font-size: 28px; margin: 15px 0 5px; }
-        .hero p { color: #aaaaaa; font-size: 16px; }
+        .hero h1 { font-size: 32px; margin: 15px 0 5px; letter-spacing: 2px; }
+        .hero p { color: #aaaaaa; font-size: 16px; margin-bottom: 20px; }
         .btn {
             display: inline-block;
             background-color: #ff3366;
             color: white;
-            padding: 12px 25px;
+            padding: 12px 28px;
             text-decoration: none;
             border-radius: 25px;
             font-weight: bold;
-            margin-top: 15px;
+            transition: 0.3s;
         }
+        .btn:hover { background-color: #e62e5c; transform: scale(1.05); }
+
         .container { max-width: 800px; margin: 0 auto; padding: 20px; }
-        .services { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin: 40px 0; }
+
+        h2 {
+            font-size: 24px;
+            margin: 40px 0 20px;
+            color: #ff3366;
+        }
+
+        .services {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin: 30px 0;
+        }
         .service-card {
             background-color: #1a1a1a;
-            padding: 20px;
-            border-radius: 10px;
-            width: 200px;
+            padding: 25px 20px;
+            border-radius: 12px;
+            width: 220px;
             border: 1px solid #333;
+            transition: 0.3s;
         }
-        .portfolio { margin: 40px 0; }
-        .video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; }
+        .service-card:hover { border-color: #ff3366; transform: translateY(-5px); }
+        .service-card h3 { color: #ff3366; margin-bottom: 10px; font-size: 18px; }
+        .service-card p { color: #cccccc; font-size: 14px; }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 12px;
+        }
         .video-card {
             background-color: #1a1a1a;
             border-radius: 10px;
             overflow: hidden;
             position: relative;
+            aspect-ratio: 9/16;
+            transition: 0.3s;
         }
-        .video-card img { width: 100%; height: 200px; object-fit: cover; display: block; }
+        .video-card:hover { transform: scale(1.03); }
+        .video-card img { width: 100%; height: 100%; object-fit: cover; display: block; }
         .video-card span {
             position: absolute; bottom: 10px; left: 10px;
-            background: rgba(0,0,0,0.7); padding: 5px 10px;
-            border-radius: 5px; font-size: 12px;
+            background: rgba(0,0,0,0.75);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 12px;
         }
-        .contact { background-color: #1a1a1a; padding: 40px 20px; margin-top: 40px; border-radius: 10px; }
-        .contact acolor: #ff3366; text-decoration: none; }
+
+        .contact {
+            background-color: #1a1a1a;
+            padding: 40px 20px;
+            margin: 40px 0;
+            border-radius: 12px;
+            border: 1px solid #333;
+        }
+        .contact p { margin: 10px 0; }
+        .contact a { color: #ff3366; text-decoration: none; font-weight: bold; }
+        .contact a:hover { text-decoration: underline; }
+
+        footer {
+            padding: 20px;
+            color: #666;
+            font-size: 13px;
+            border-top: 1px solid #222;
+        }
     </style>
 </head>
 <body>
 
     <div class="hero">
-        <img src="https://i.postimg.cc/Y918MLJ4/IMG-1958.jpg"
+        <img src="https://i.postimg.cc/Y918MLJ4/IMG-1958.jpg" alt="DOZA">
         <h1>DOZA</h1>
-        <p>UGC Creator | Versatile Content Creator </p>
-        <a href="#contact" class="btn"> Let's work together</a>
+        <p>UGC Creator | Versatile Content Creator</p>
+        <a href="#contact" class="btn">Let's Work Together</a>
     </div>
 
     <div class="container">
+        <h2>What I Do</h2>
         <div class="services">
             <div class="service-card">
-                <h3>Video ADS </h3>
-                <p>Creating short engaging video for products.</p>
+                <h3>Video Ads</h3>
+                <p>Creating short, engaging videos for products that convert viewers into customers.</p>
             </div>
             <div class="service-card">
                 <h3>Unboxing</h3>
-                <p>Authentic unboxing and try-on experiences. </p>
+                <p>Authentic unboxing and try-on experiences that build trust with your audience.</p>
             </div>
             <div class="service-card">
-                <h3> Professional Editing</h3>
-               <p/>Fast-paced edits that match current trends </p>
+                <h3>Professional Editing</h3>
+                <p>Fast-paced edits that match current trends and keep viewers hooked.</p>
             </div>
         </div>
 
-        <div class="portfolio">
-             <h2>My previous Work</h2>
-            <div class="video-grid">
-                <div class="video-card">
-                    <img src="https://via.placeholder.com/150x200" alt="فيديو 1">
-                    <span>product Demos</span>
-                </div>
-                <div class="video-card">
-                    <img src="https://via.placeholder.com/150x200" alt="فيديو 2">
-                    <span>Product Reviews</span>
-                </div>
-                <div class="video-card">
-                    <img src="https://via.placeholder.com/150x200" alt="فيديو 3">
-                    <span>product Demos</span>
-                </div>
+        <h2>My Previous Work</h2>
+        <div class="video-grid">
+            <div class="video-card">
+                <img src="https://via.placeholder.com/300x533/1a1a1a/ff3366?text=Product+Demo" alt="Work 1">
+                <span>Product Demo</span>
+            </div>
+            <div class="video-card">
+                <img src="https://via.placeholder.com/300x533/1a1a1a/ff3366?text=Product+Review" alt="Work 2">
+                <span>Product Review</span>
+            </div>
+            <div class="video-card">
+                <img src="https://via.placeholder.com/300x533/1a1a1a/ff3366?text=Unboxing" alt="Work 3">
+                <span>Unboxing</span>
             </div>
         </div>
 
         <div class="contact" id="contact">
             <h2>Contact Me</h2>
-            <p>Email: 
-              <a href="mailto:doza.mss@icloud.com">doza.mss@ilcloud.com</a></p>
-          <p>Instagram: <a href="https://instagram.com/doza_ugc" target="_blank">@doza_ugc</a></p>
-            <p>TikTok: <a href="https://tiktok.com/doza_ugc" target="_blank">@doza_ugc</a></p>
+            <p>📧 Email: <a href="mailto:doza.mss@icloud.com">doza.mss@icloud.com</a></p>
+            <p>📷 Instagram: <a href="https://instagram.com/doza_ugc" target="_blank">@doza_ugc</a></p>
+            <p>🎵 TikTok: <a href="https://tiktok.com/@doza_ugc" target="_blank">@doza_ugc</a></p>
         </div>
     </div>
+
+    <footer>
+        © 2026 DOZA — All Rights Reserved
+    </footer>
 
 </body>
 </html>
